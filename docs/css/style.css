@@ -734,6 +734,10 @@ h3 {
           letter-spacing: 10px; }
       .block-tile .container {
         grid-template-columns: 1fr 1fr; }
+      .footer-main__menu {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
         .footer-main__menu-list {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;

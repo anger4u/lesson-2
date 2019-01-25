@@ -34,7 +34,8 @@
 		align-items: center;
 
 		@include media ((
-			flex-flow: (md: column wrap)
+			flex-flow: (md: column wrap),
+			align-items: (lg: flex-start)
 			))
 
 		&-list {
