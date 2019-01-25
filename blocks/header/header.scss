@@ -1,0 +1,105 @@
+@import '../../assets/styles/variables.scss';
+@import '../../assets/styles/mixins.scss';
+
+.header {
+  text-transform: uppercase;
+
+  h1 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 33px;
+    font-weight: normal;
+    margin: -18px -35px 40px 0;
+
+    @include media ((
+    font-size: (lg: 30px),
+    letter-spacing: (md: 5px),
+    margin-right: (md: 0)
+    ));
+  }
+
+  .container {
+    display: grid;
+    grid: minmax(150px, auto) 1fr minmax(150px, auto) / auto;
+    justify-items: stretch;
+    min-height: 150px;
+    background-color: transparent;
+    min-height: 900px;
+  }
+
+  &--home {
+    background: url('../img/shop.png') center center no-repeat;
+    background-size: cover;
+  }
+
+  &-main {
+    display: grid;
+    grid: auto / auto auto;
+    justify-content: space-between;
+    padding: 44px 0;
+
+    @include media ((
+    align-items: (lg: start),
+    grid: (md: unset)
+    ));
+
+    &__logo {
+      display: flex;
+      padding: 0;
+      align-items: center;
+    }
+
+    &__menu {
+      display: grid;
+      grid-column: -1/ auto;
+      align-content: center;
+
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        @include media ((
+        flex-flow: (lg: column wrap)
+        ));
+      }
+
+      &-item {
+        margin: 20px 70px 20px 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &-link {
+        color: $white;
+        padding: 0;
+        margin-right: -6px;
+
+        &--red {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+  }
+
+  &__mover {
+    padding-bottom: 65px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
